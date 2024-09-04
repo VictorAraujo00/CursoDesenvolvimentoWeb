@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>OO abstração2</title>
+</head>
+<body>
+
+	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+	<script type="text/babel">
+
+
+		class Cadeira{
+
+
+			constructor(qtd_pernas, giratoria, cor){
+
+				this.qtd_pernas = qtd_pernas
+				this.giratoria = giratoria
+				this.cor = cor
+
+			}
+
+			girarCaderia(){
+
+				if(this.giratoria == true){
+					document.write("Girou")
+				}else{
+					document.write("Não girou")
+				}
+
+			}
+
+
+		}
+
+		class Sofa{
+
+			constructor(qtd_lugares, reclinavel, cor){
+
+				this.qtd_lugares = qtd_lugares
+				this.reclinavel = reclinavel
+				this.cor = cor
+
+
+			}
+
+
+			reclinarSofa(){
+
+				if(this.reclinavel == true){
+					return "Sofá reclinou"
+				}else{
+					return "Sofá não reclinou"
+				}
+
+
+			}
+
+			getCor(){
+				return this.cor
+			}
+
+
+		}
+
+		/*let cadeira = new Cadeira(1,true,'azul')
+		cadeira.girarCaderia()
+
+		let cadeiras = []
+
+		cadeiras.push(new Cadeira(1, true, 'Verde'))
+		cadeiras.push(new Cadeira(4, false, 'Preta'))
+
+		console.log(cadeiras)*/
+
+		/*let sofa = new Sofa(4, true, 'Vermelha')
+
+		sofa.reclinarSofa()*/
+
+		let sofas = []
+
+		sofas.push(new Sofa(4, true, 'Vermelho'))
+		sofas.push(new Sofa(4, false, 'azul'))
+
+		for (let i in sofas){
+			console.log(`O Sofá da cor ${sofas[i].getCor()} fez a ação de ${sofas[i].reclinarSofa()}`)
+		}
+
+
+		
+		
+	</script>
+
+</body>
+</html>
